@@ -1,0 +1,17 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Hello World Node.js application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "start:pm2": "pm2 start app.js --name hello-app",
+    "stop:pm2": "pm2 stop hello-app",
+    "restart:pm2": "pm2 restart hello-app",
+    "status:pm2": "pm2 status hello-app"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pm2": "^5.4.3"
+  }
+}

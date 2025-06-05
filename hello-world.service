@@ -1,0 +1,15 @@
+[Unit]
+Description=Hello World Node.js Application
+After=network.target
+
+[Service]
+Type=forking
+User=ubuntu
+WorkingDirectory=/home/ubuntu/hello-world
+ExecStart=/usr/bin/npm run start:pm2
+ExecReload=/usr/bin/pm2 reload hello-app
+ExecStop=/usr/bin/pm2 stop hello-app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
